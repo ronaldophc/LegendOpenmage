@@ -1245,3 +1245,7 @@
 /lib/Credis
 /app/code/community/Cm/RedisSession
 /app/etc/modules/Cm_RedisSession.xml
+/media/dhl/logo.jpg
+/media/customer/.htaccess
+/media/downloadable/.htaccess
+/media/.htaccess

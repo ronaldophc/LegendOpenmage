@@ -1,0 +1,22 @@
+tasks:
+  php:
+    usage: run php commands
+    args:
+      command:
+        usage: the command that will be run
+    run: docker compose exec php ${command}
+  composer:
+    usage: download and install libraries
+    args:
+      command:
+        usage: the command that composer will run
+    run: docker run --rm -v $(pwd)/magento-lts-20.12.2:/var/www -w /var/www composer:latest composer install --ignore-platform-reqs
+  up:
+    usage: start the docker containers
+    run: docker compose up -d
+  add-host:
+    usage: add hosts for docker containers
+    args:
+      host:
+        usage: the host that will be added
+    run: sudo ./.docker/nginx/add-host ${host}

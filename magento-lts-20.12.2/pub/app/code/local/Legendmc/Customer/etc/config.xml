@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Legendmc_Customer>
+            <version>1.0.0</version>
+        </Legendmc_Customer>
+    </modules>
+
+    <global>
+        <blocks>
+            <legendmc_customer>
+                <class>Legendmc_Customer_Block</class>
+            </legendmc_customer>
+
+            <customer>
+                <rewrite>
+                    <form_register>Legendmc_Customer_Block_Form_Register</form_register>
+                </rewrite>
+            </customer>
+        </blocks>
+    </global>
+
+    <frontend>
+        <layout>
+            <updates>
+                <legendmc_customer>
+                    <file>customer.xml</file>
+                </legendmc_customer>
+            </updates>
+        </layout>
+    </frontend>
+</config>

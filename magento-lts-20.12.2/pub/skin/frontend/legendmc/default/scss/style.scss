@@ -1,0 +1,41 @@
+/* ============================================ *
+ * Global
+ * ============================================ */
+
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  min-width: 320px;
+  min-height: 100%;
+  margin: 0 auto;
+  background: #FFFFFF;
+}
+
+
+.logo {
+  display: block;
+  float: left;
+  width: 65%;
+  min-width: 100px;
+  min-height: 44px;
+  text-align: center;
+  padding: 10px;
+
+  img {
+    max-width: 100%;
+  }
+
+  .small {
+    display: block;
+  }
+  .large {
+    display: none;
+  }
+}
+
+.logo:hover {
+  opacity: 0.8;
+}

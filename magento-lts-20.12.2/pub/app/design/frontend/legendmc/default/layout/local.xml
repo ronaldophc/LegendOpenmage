@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<layout version="0.1.0">
+    <default>
+        <reference name="head">
+            <!--removendo arquivos javascript inúteis-->
+            <action method="removeItem">
+                <type>js</type>
+                <file>scriptaculous/builder.js</file>
+            </action>
+            <action method="removeItem">
+                <type>js</type>
+                <file>scriptaculous/dragdrop.js</file>
+            </action>
+            <action method="removeItem">
+                <type>js</type>
+                <file>scriptaculous/slider.js</file>
+            </action>
+
+            <!--removendo arquivos css inúteis-->
+            <action method="removeItem">
+                <type>skin_css</type>
+                <name>css/styles.css</name>
+            </action>
+            <action method="removeItem">
+                <type>skin_css</type>
+                <name>css/widgets.css</name>
+            </action>
+            <action method="removeItem">
+                <type>skin_css</type>
+                <name>css/print.css</name>
+            </action>
+
+            <!--adicionando arquivos usados na loja CSS-->
+            <action method="addCss">
+                <stylesheet>css/style.css</stylesheet>
+            </action>
+
+        </reference>
+
+    </default>
+</layout>

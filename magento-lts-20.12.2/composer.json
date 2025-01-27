@@ -1,0 +1,24 @@
+{
+  "name": "ronaldo/legendmc",
+  "require": {
+    "aydin-hassan/magento-core-composer-installer": "^2.1.0",
+    "openmage/magento-lts": "^20.0.0"
+  },
+  "extra": {
+    "magento-core-package-type": "magento-source",
+    "magento-root-dir": "pub",
+    "magento-deploystrategy": "copy",
+    "magento-deploystrategy-dev": "symlink",
+    "magento-force": true,
+    "magento-force-dev": true,
+    "auto-append-gitignore": true
+  },
+  "config": {
+    "allow-plugins": {
+      "aydin-hassan/magento-core-composer-installer": true,
+      "cweagans/composer-patches": true,
+      "magento-hackathon/magento-composer-installer": true,
+      "openmage/composer-plugin": true
+    }
+  }
+}

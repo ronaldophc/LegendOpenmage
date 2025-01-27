@@ -1,0 +1,70 @@
+<!--@subject Seja bem-vindo, {{var customer.name}}! @-->
+
+                    <!-- head-->
+                    {{template config_path="k13_mail_config/general_config/header"}}
+                    <!-- body -->
+                    <tr>
+                        <td valign="top" colspan="2" style="padding-top:19px">
+                            <h1 style="font-size: 18px; font-weight: normal;  margin: 0 0 11px 0; color:#5c5c5c; line-height:56px; text-align: left;">
+                                Bem-vindo a {{config path="general/store_information/name"}}.
+                            </h1>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+	                            <span  style="font-size: 15px; line-height: 0px; line-height:25px;color:#8c8c8c;">
+	                                Acesse sua conta clicando em <a href="{{config path='web/secure/base_url'}}/customer/account/login/" style="color:#8c8c8c;">Entrar</a> ou <a href="{{config path='web/secure/base_url'}}/customer/account/login/" style="color:#8c8c8c;">Minha Conta</a> no alto de nossa página, então informe seu e-mail e senha
+	                            </span>
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td colspan="2">
+                            <div style="border-left:2px solid #968f8f;padding:5px 0px 5px 13px!important;margin:16px 0px 0px 1px;">
+                                <p style="font-size: 15px; line-height: 0px; line-height:25px;color:#8c8c8c;">Utilize as seguintes informações de acesso:</p>
+                                <p style="font-size: 15px; line-height: 0px; line-height:25px;color:#8c8c8c;">E-mail:
+                                    <a href="mailto:{{var customer.email}}" style="text-decoration: none; font-weight: bold; color: #5C5C5C;">{{var customer.email}}</a></p>
+                                <p style="font-size: 15px; line-height: 0px; line-height:25px;color:#8c8c8c;">Senha: a senha definida no cadastro.</p>
+                                <p style="font-size: 15px; line-height: 0px; line-height:25px;color:#8c8c8c;">Para recuperar sua senha
+                                    <a href="{{config path='web/secure/base_url'}}customer/account/forgotpassword/" style="text-decoration: none; font-weight: bold; color: #5C5C5C;">clique aqui
+                                    </a>.
+                                </p>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div style="margin:16px 0px 0px 1px!important; font-size: 15px; line-height: 0px; line-height:25px;color:#8c8c8c;">Quando acessar sua conta você poderá:
+                                <ul style="list-style:none; padding-left:37px; font-size: 15px; line-height: 0px; line-height:25px;color:#8c8c8c;">
+                                    <li>- Fechar compras com maior agilidade;</li>
+                                    <li>- Acompanhar seus pedidos;</li>
+                                    <li>- Visualizar histórico de pedidos;</li>
+                                    <li>- Alterar informações da conta;</li>
+                                    <li>- Alterar sua senha;</li>
+                                    <li>- Cadastrar novos endereços de entrega (como endereço de familiares e amigos!)</li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="2">
+                            <div style="margin-top:12px; font-size: 15px; line-height: 0px; line-height:25px; color:#8c8c8c;">
+                                Se você tiver alguma dúvida sobre sua conta ou qualquer outra informação do site, não deixe de entrar em contato através do e-mail
+                                <a href="mailto:{{config path='trans_email/ident_general/email'}}" style="text-decoration: none; font-weight: bold; color: #5C5C5C;">
+                                    {{config path="trans_email/ident_general/email"}}
+                                </a>.
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;padding-top:31px" colspan="2">
+                            <h1 style="font-size: 18px; font-weight: normal; line-height:56px; margin: 0 0 11px 0; color:#5c5c5c;">Obrigado, {{config path="general/store_information/name"}}.</h1>
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

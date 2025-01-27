@@ -1,0 +1,51 @@
+<!--@subject Email - Header @-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+</head>
+<body>
+{{var non_inline_styles}}
+{{inlinecss file="email-inline.css"}}
+<!-- Begin wrapper table -->
+<table width="100%" cellpadding="0" cellspacing="0" border="0" id="background-table">
+    <tr>
+        <td valign="top" class="container-td" align="center">
+            <table cellpadding="0" cellspacing="0" border="0" align="center" class="container-table">
+                <tr>
+                    <td>
+                        <table cellpadding="0" cellspacing="0" width="700" style="border: solid 1px {{var header_background}}; padding: 5px;">
+                            <tr style="background: {{var header_background}};">
+                                <td style="margin: 35px; display: block; float: left;">
+                                    <a href="{{store url=""}}">
+                                        <img
+                                            {{if logo_width}}
+                                            width="{{var logo_width}}"
+                                            {{else}}
+                                            width="165"
+                                            {{/if}}
+
+                                            {{if logo_height}}
+                                            height="{{var logo_height}}"
+                                            {{else}}
+                                            height="48"
+                                            {{/if}}
+
+                                            src="{{var logo_url}}"
+                                            alt="{{var logo_title}}"
+                                            title="{{var logo_title}}"
+                                            border="0"/>
+                                    </a>
+                                </td>
+                                <td valign="top" align="center" style="display: block; margin: 35px; float: right;">
+                                    <img src="{{var phone_icon_url}}" style="margin-bottom:11px"/><br>
+                                    <span>
+                                        <a
+                                                style="font-size:12px;color: {{var phone_color}}; font-weight: bold; text-decoration: none;"
+                                                href="tel:{{config path='general/store_information/phone'}}">{{config path="general/store_information/phone"}}</a>
+                                    </span>
+                                </td>
+                            </tr>
+                            <!-- Begin Content -->
+                    

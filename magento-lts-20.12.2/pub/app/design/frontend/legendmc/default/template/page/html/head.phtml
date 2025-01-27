@@ -1,0 +1,49 @@
+<?php
+/**
+ * OpenMage
+ *
+ * This source file is subject to the Academic Free License (AFL 3.0)
+ * that is bundled with this package in the file LICENSE_AFL.txt.
+ * It is also available at https://opensource.org/license/afl-3-0-php
+ *
+ * @category    design
+ * @package     base_default
+ * @copyright   Copyright (c) 2006-2020 Magento, Inc. (https://www.magento.com)
+ * @copyright   Copyright (c) 2021-2022 The OpenMage Contributors (https://www.openmage.org)
+ * @license     https://opensource.org/licenses/afl-3.0.php  Academic Free License (AFL 3.0)
+ */
+?>
+<?php
+/**
+ * @var Mage_Page_Block_Html_Head $this
+ */
+?>
+<meta http-equiv="Content-Type" content="<?php echo $this->getContentType() ?>" />
+<title><?php echo $this->getTitle() ?></title>
+<meta name="description" content="<?php echo htmlspecialchars($this->getDescription()) ?>" />
+<meta name="keywords" content="<?php echo htmlspecialchars($this->getKeywords()) ?>" />
+<meta name="robots" content="<?php echo htmlspecialchars($this->getRobots()) ?>" />
+
+<!-- Favicon custom -->
+<link rel="apple-touch-icon" sizes="57x57" href="<?= $this->getSkinUrl('images/favicon/apple-icon-57x57.png') ?>">
+<link rel="apple-touch-icon" sizes="60x60" href="<?= $this->getSkinUrl('images/favicon/apple-icon-60x60.png') ?>">
+<link rel="apple-touch-icon" sizes="72x72" href="<?= $this->getSkinUrl('images/favicon/apple-icon-72x72.png') ?>">
+<link rel="apple-touch-icon" sizes="76x76" href="<?= $this->getSkinUrl('images/favicon/apple-icon-76x76.png') ?>">
+<link rel="apple-touch-icon" sizes="114x114" href="<?= $this->getSkinUrl('images/favicon/apple-icon-114x114.png') ?>">
+<link rel="apple-touch-icon" sizes="120x120" href="<?= $this->getSkinUrl('images/favicon/apple-icon-120x120.png') ?>">
+<link rel="apple-touch-icon" sizes="144x144" href="<?= $this->getSkinUrl('images/favicon/apple-icon-144x144.png') ?>">
+<link rel="apple-touch-icon" sizes="152x152" href="<?= $this->getSkinUrl('images/favicon/apple-icon-152x152.png') ?>">
+<link rel="apple-touch-icon" sizes="180x180" href="<?= $this->getSkinUrl('images/favicon/apple-icon-180x180.png') ?>">
+<link rel="icon" type="image/png" sizes="192x192"  href="<?= $this->getSkinUrl('images/favicon/android-icon-192x192.png') ?>">
+<link rel="icon" type="image/png" sizes="32x32" href="<?= $this->getSkinUrl('images/favicon/favicon-32x32.png') ?>">
+<link rel="icon" type="image/png" sizes="96x96" href="<?= $this->getSkinUrl('images/favicon/favicon-96x96.png') ?>">
+<link rel="icon" type="image/png" sizes="16x16" href="<?= $this->getSkinUrl('images/favicon/favicon-16x16.png') ?>">
+<link rel="manifest" href="<?= $this->getSkinUrl('images/favicon/manifest.json') ?>">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="<?= $this->getSkinUrl('images/favicon/ms-icon-144x144.png') ?>">
+<meta name="theme-color" content="#ffffff">
+
+<?php echo $this->getCssJsHtml() ?>
+<?php echo $this->getChildHtml() ?>
+<?php echo $this->helper('core/js')->getTranslatorScript() ?>
+<?php echo $this->getIncludes() ?>

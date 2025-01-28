@@ -18,6 +18,9 @@
                 <rewrite>
                     <html_header>Legendmc_Page_Block_Html_Header</html_header>
                 </rewrite>
+                <rewrite>
+                    <html_1column>Legendmc_Page_Block_1column</html_1column>
+                </rewrite>
             </page>
         </blocks>
 

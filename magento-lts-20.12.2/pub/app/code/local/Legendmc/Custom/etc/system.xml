@@ -17,13 +17,21 @@
             <show_in_store>1</show_in_store>
             <groups>
                 <configs translate="label">
-                    <label>Customizações</label>
+                    <label>WhatsApp no Header</label>
                     <frontend_type>text</frontend_type>
                     <sort_order>1</sort_order>
                     <show_in_default>1</show_in_default>
                     <show_in_website>1</show_in_website>
                     <show_in_store>1</show_in_store>
                     <fields>
+                        <active>
+                            <label>Habilitado</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </active>
                         <whatsapp_number>
                             <label>Número do WhatsApp</label>
                             <frontend_type>text</frontend_type>

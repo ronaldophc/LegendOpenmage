@@ -9,24 +9,12 @@
 
     <?= $this->getChildHtml('after_body_start') ?>
 
-    <div class="wrapper">
-        <?= $this->getChildHtml('global_notices') ?>
-        <div class="page">
-            <?= $this->getChildHtml('header') ?>
-            <div class="main-container col1-layout">
-                <div class="main">
-                    <?= $this->getChildHtml('breadcrumbs') ?>
-                    <div class="col-main">
-                        <?= $this->getChildHtml('global_messages') ?>
-                        <?= $this->getChildHtml('content') ?>
-                    </div>
-                </div>
-            </div>
-            <?= $this->getChildHtml('footer') ?>
-            <?= $this->getChildHtml('global_cookie_notice') ?>
-            <?= $this->getChildHtml('before_body_end') ?>
-        </div>
-    </div>
-    <?= $this->getAbsoluteFooter() ?>
+    <?= $this->getChildHtml('header') ?>
+
+    <?= $this->getChildHtml('content') ?>
+
+    <?= $this->getChildHtml('footer') ?>
+    <?= $this->getChildHtml('global_cookie_notice') ?>
+    <?= $this->getChildHtml('before_body_end') ?>
     </body>
 </html>

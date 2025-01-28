@@ -1,12 +1,30 @@
-<div class="header-container">
-    <div class="header">
-        <a href="<?= $this->getUrl('/') ?>" title="<?= $this->getLogoAlt() ?>" class="logo">
-            <img src="<?= $this->getLogoSrc() ?>" alt="<?= $this->getLogoAlt() ?>" />
-        </a>
-        <div class="quick-access">
-            <?= $this->getChildHtml('topLinks') ?>
+<header>
+    <nav class="navbar navbar-expand compensate-for-scrollbar">
+        <div class="container">
+            <div class="col-2">
+                <a href="<?= $this->getUrl('customer/account')?>">
+                    <i class="fas fa-user"></i>
+                    <?= $this->helper('customer')->__('My Account') ?>
+                </a>
+            </div>
+
+            <div class="logo">
+                <a href="<?= $this->getUrl('/') ?>" title="<?= $this->getLogoAlt() ?>" class="logo">
+                    <img src="<?= $this->getLogoSrc() ?>" alt="<?= $this->getLogoAlt() ?>" />
+                </a>
+            </div>
+
+            <div class="text-right button">
+                <a href="<?= $this->getUrl('customer/account/create')?>">
+                    <i class="fa-solid fa-circle-user"></i>
+                    <?= $this->helper('customer')->__('Register') ?>
+                </a>
+
+                <a href="<?= $this->getUrl('customer/account/login')?>">
+                    <i class="fas fa-sign-in-alt"></i>
+                    <?= $this->helper('customer')->__('Login') ?>
+                </a>
+            </div>
         </div>
-        <?= $this->getChildHtml('topContainer'); ?>
-    </div>
-</div>
-<?= $this->getChildHtml('topMenu') ?>
+    </nav>
+</header>

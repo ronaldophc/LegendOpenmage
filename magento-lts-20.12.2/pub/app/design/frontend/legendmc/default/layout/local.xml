@@ -32,7 +32,21 @@
 
             <!--adicionando arquivos usados na loja CSS-->
             <action method="addCss">
+                <stylesheet>libs/bootstrap-5.3.3/css/bootstrap.min.css</stylesheet>
+            </action>
+
+            <action method="addCss">
+                <stylesheet>libs/fontawesome-6.7.2/css/all.min.css</stylesheet>
+            </action>
+
+            <action method="addCss">
                 <stylesheet>css/style.css</stylesheet>
+            </action>
+
+            <!--adicionando arquivos js-->
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>libs/bootstrap-5.3.3/js/boostrap.bundle.min.js</name>
             </action>
 
         </reference>

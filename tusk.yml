@@ -20,3 +20,6 @@ tasks:
       host:
         usage: the host that will be added
     run: sudo ./.docker/nginx/add-host ${host}
+  scss:
+    usage: compile SCSS files
+    run: docker run --rm -v $(pwd)/magento-lts-20.12.2:/var/www -w /var/www node:alpine sh -c "npm install -g sass && sass pub/skin/frontend/legendmc/default/scss/style.scss pub/skin/frontend/legendmc/default/css/style.css"

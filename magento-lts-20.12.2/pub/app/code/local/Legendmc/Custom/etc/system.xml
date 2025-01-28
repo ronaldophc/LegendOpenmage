@@ -1,0 +1,41 @@
+<?xml version='1.0'?>
+<config>
+    <tabs>
+        <legendmc_custom translate="label">
+            <label>LegendMC Custom</label>
+            <sort_order>0</sort_order>
+        </legendmc_custom>
+    </tabs>
+    <sections>
+        <legendmc_custom translate="label">
+            <label>Geral</label>
+            <tab>legendmc_custom</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>1000</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <configs translate="label">
+                    <label>Customizações</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>1</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>
+                    <fields>
+                        <whatsapp_number>
+                            <label>Número do WhatsApp</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>1</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Exemplo: (42) 98414-7386</comment>
+                        </whatsapp_number>
+                    </fields>
+                </configs>
+            </groups>
+        </legendmc_custom>
+    </sections>
+</config>

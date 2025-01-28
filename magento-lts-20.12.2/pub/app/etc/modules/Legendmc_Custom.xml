@@ -1,12 +1,9 @@
 <?xml version="1.0"?>
 <config>
     <modules>
-        <Legendmc_Customer>
+        <Legendmc_Custom>
             <active>true</active>
             <codePool>local</codePool>
-            <depends>
-                <Mage_Customer/>
-            </depends>
-        </Legendmc_Customer>
+        </Legendmc_Custom>
     </modules>
 </config>

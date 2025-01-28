@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Legendmc_Page>
+            <version>1.0.0</version>
+        </Legendmc_Page>
+    </modules>
+
+    <global>
+
+        <blocks>
+            <legendmc_page>
+                <class>Legendmc_Page_Block</class>
+            </legendmc_page>
+
+            <page>
+                <rewrite>
+                    <html_header>Legendmc_Page_Block_Html_Header</html_header>
+                </rewrite>
+            </page>
+        </blocks>
+
+        <helpers>
+            <legendmc_page>
+                <class>Legendmc_Page_Helper</class>
+            </legendmc_page>
+        </helpers>
+    </global>
+
+</config>

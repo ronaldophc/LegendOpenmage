@@ -1,90 +1,216 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-size: 100%;
-    font: inherit;
-    vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-    display: block;
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
+
 body {
-    line-height: normal;
+  line-height: normal;
 }
-ol, ul {
-    list-style: none;
+
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-    quotes: none;
+
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after, q:before, q:after {
-    content: '';
-    content: none;
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
+
 table {
-    border-collapse: collapse;
-    border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
-a, a:hover, a:focus {
-    text-decoration: none;
+
+a,
+a:hover,
+a:focus {
+  text-decoration: none;
 }
-a, img {
-    -webkit-transform: rotate(0);
-    -moz-transform: rotate(0);
-    transform: rotate(0);
+
+a,
+img {
+  -webkit-transform: rotate(0);
+  -moz-transform: rotate(0);
+  transform: rotate(0);
 }
-a, img, button {
-    transition: all 0.2s;
-    -moz-transition: all 0.2s;
-    -webkit-transition: all 0.2s;
-    -o-transition: all 0.2s;
+
+a,
+img,
+button {
+  transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
 }
-a, button, select, label {
-    cursor: pointer;
+
+a,
+button,
+select,
+label {
+  cursor: pointer;
 }
+
 .clear {
-    clear: both;
-    float: none;
+  clear: both;
+  float: none;
 }
+
 * {
-    font-font: Roboto, sans-serif;
+  font-font: Roboto, sans-serif;
 }
-strong, b {
-    font-weight: 700;
+
+strong,
+b {
+  font-weight: 700;
 }
+
 em {
-    font-style: italic;
+  font-style: italic;
 }
+
 del {
-    text-decoration: line-through;
+  text-decoration: line-through;
 }
-img, iframe, svg {
-    max-height: 100%;
+
+img,
+iframe,
+svg {
+  max-height: 100%;
 }
+
 .hidden-text {
-    font-size: 0;
-    max-height: 0;
+  font-size: 0;
+  max-height: 0;
 }
+
 header {
-    background-color: #03ACED;
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
+  background-color: #03ACED;
+  position: relative;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
 }
 header a {
-    color: white;
-    font-size: 16px;
-    font-weight: 700;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
 }
 header a i {
-    margin-right: 5px;
+  margin-right: 5px;
 }
 header a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 header a:not(:last-child) {
-    margin-right: 10px;
+  margin-right: 10px;
 }
+
+/*# sourceMappingURL=style.css.map */

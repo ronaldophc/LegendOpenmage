@@ -163,7 +163,7 @@ label {
 }
 
 * {
-  font-font: Roboto, sans-serif;
+  font-family: Roboto, sans-serif;
 }
 
 strong,
@@ -200,10 +200,11 @@ header {
 }
 header a {
   color: white;
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 600;
 }
 header a i {
+  font-size: 16px;
   margin-right: 5px;
 }
 header a:hover {

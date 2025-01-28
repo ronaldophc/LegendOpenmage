@@ -1,16 +1,18 @@
 <header>
     <nav class="navbar navbar-expand compensate-for-scrollbar">
         <div class="container">
+            <div class="logo">
+                <a href="<?= $this->getUrl('/') ?>" title="<?= $this->getLogoAlt() ?>" class="logo">
+                    <!--                    <img src="--><?php //= $this->getLogoSrc() ?><!--" alt="--><?php //= $this->getLogoAlt() ?><!--" />-->
+                    <img src="https://placehold.co/100x30@2x.png?text=LegendMC" alt="<?= $this->getLogoAlt() ?>" />
+                </a>
+
+            </div>
+
             <div class="col-2">
                 <a href="<?= $this->getWhatsAppLink() ?>" target="_blank">
                     <i class="fab fa-whatsapp"></i>
                     <?= $this->getWhatsAppNumber() ?>
-                </a>
-            </div>
-
-            <div class="logo">
-                <a href="<?= $this->getUrl('/') ?>" title="<?= $this->getLogoAlt() ?>" class="logo">
-                    <img src="<?= $this->getLogoSrc() ?>" alt="<?= $this->getLogoAlt() ?>" />
                 </a>
             </div>
 

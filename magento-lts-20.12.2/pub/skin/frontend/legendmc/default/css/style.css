@@ -119,7 +119,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 
@@ -163,7 +163,8 @@ label {
 }
 
 * {
-  font-family: Roboto, sans-serif;
+  font-family: Roboto,sans-serif !important;
+  font-weight: 700 !important;
 }
 
 strong,
@@ -188,6 +189,10 @@ svg {
 .hidden-text {
   font-size: 0;
   max-height: 0;
+}
+
+body {
+  background-color: #f3f3f3;
 }
 
 /*!
@@ -231,12 +236,12 @@ svg {
 .fa-solid,
 .far,
 .fa-regular {
-  font-family: "Font Awesome 6 Free";
+  font-family: 'Font Awesome 6 Free';
 }
 
 .fa-brands,
 .fab {
-  font-family: "Font Awesome 6 Brands";
+  font-family: 'Font Awesome 6 Brands';
 }
 
 .fa-1x {
@@ -287,14 +292,14 @@ svg {
 
 .fa-xs {
   font-size: 0.75em;
-  line-height: 0.0833333337em;
+  line-height: 0.08333em;
   vertical-align: 0.125em;
 }
 
 .fa-sm {
   font-size: 0.875em;
-  line-height: 0.0714285718em;
-  vertical-align: 0.0535714295em;
+  line-height: 0.07143em;
+  vertical-align: 0.05357em;
 }
 
 .fa-lg {
@@ -305,7 +310,7 @@ svg {
 
 .fa-xl {
   font-size: 1.5em;
-  line-height: 0.0416666682em;
+  line-height: 0.04167em;
   vertical-align: -0.125em;
 }
 
@@ -325,6 +330,7 @@ svg {
   margin-left: var(--fa-li-margin, 2.5em);
   padding-left: 0;
 }
+
 .fa-ul > li {
   position: relative;
 }
@@ -448,6 +454,7 @@ svg {
     transition-duration: 0s;
   }
 }
+
 @keyframes fa-beat {
   0%, 90% {
     transform: scale(1);
@@ -456,6 +463,7 @@ svg {
     transform: scale(var(--fa-beat-scale, 1.25));
   }
 }
+
 @keyframes fa-bounce {
   0% {
     transform: scale(1, 1) translateY(0);
@@ -479,11 +487,13 @@ svg {
     transform: scale(1, 1) translateY(0);
   }
 }
+
 @keyframes fa-fade {
   50% {
     opacity: var(--fa-fade-opacity, 0.4);
   }
 }
+
 @keyframes fa-beat-fade {
   0%, 100% {
     opacity: var(--fa-beat-fade-opacity, 0.4);
@@ -494,11 +504,13 @@ svg {
     transform: scale(var(--fa-beat-fade-scale, 1.125));
   }
 }
+
 @keyframes fa-flip {
   50% {
     transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
   }
 }
+
 @keyframes fa-shake {
   0% {
     transform: rotate(-15deg);
@@ -528,6 +540,7 @@ svg {
     transform: rotate(0deg);
   }
 }
+
 @keyframes fa-spin {
   0% {
     transform: rotate(0deg);
@@ -536,6 +549,7 @@ svg {
     transform: rotate(360deg);
   }
 }
+
 .fa-rotate-90 {
   transform: rotate(90deg);
 }
@@ -598,43 +612,43 @@ svg {
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
 readers do not read off random characters that represent icons */
 .fa-0 {
-  --fa: "\30 ";
+  --fa: "\30";
 }
 
 .fa-1 {
-  --fa: "\31 ";
+  --fa: "\31";
 }
 
 .fa-2 {
-  --fa: "\32 ";
+  --fa: "\32";
 }
 
 .fa-3 {
-  --fa: "\33 ";
+  --fa: "\33";
 }
 
 .fa-4 {
-  --fa: "\34 ";
+  --fa: "\34";
 }
 
 .fa-5 {
-  --fa: "\35 ";
+  --fa: "\35";
 }
 
 .fa-6 {
-  --fa: "\36 ";
+  --fa: "\36";
 }
 
 .fa-7 {
-  --fa: "\37 ";
+  --fa: "\37";
 }
 
 .fa-8 {
-  --fa: "\38 ";
+  --fa: "\38";
 }
 
 .fa-9 {
-  --fa: "\39 ";
+  --fa: "\39";
 }
 
 .fa-fill-drip {
@@ -654,7 +668,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-at {
-  --fa: "\@";
+  --fa: "\40";
 }
 
 .fa-trash-can {
@@ -1022,7 +1036,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-k {
-  --fa: "K";
+  --fa: "\4b";
 }
 
 .fa-landmark-flag {
@@ -1162,7 +1176,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-w {
-  --fa: "W";
+  --fa: "\57";
 }
 
 .fa-earth-africa {
@@ -1562,7 +1576,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-asterisk {
-  --fa: "\*";
+  --fa: "\2a";
 }
 
 .fa-square-check {
@@ -1902,7 +1916,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-i {
-  --fa: "I";
+  --fa: "\49";
 }
 
 .fa-hryvnia-sign {
@@ -1930,7 +1944,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-v {
-  --fa: "V";
+  --fa: "\56";
 }
 
 .fa-bangladeshi-taka-sign {
@@ -2006,11 +2020,11 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-q {
-  --fa: "Q";
+  --fa: "\51";
 }
 
 .fa-g {
-  --fa: "G";
+  --fa: "\47";
 }
 
 .fa-notes-medical {
@@ -2154,7 +2168,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-e {
-  --fa: "E";
+  --fa: "\45";
 }
 
 .fa-pen-clip {
@@ -2234,7 +2248,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-c {
-  --fa: "C";
+  --fa: "\43";
 }
 
 .fa-tablet-button {
@@ -2570,7 +2584,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-l {
-  --fa: "L";
+  --fa: "\4c";
 }
 
 .fa-fire {
@@ -3658,7 +3672,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-z {
-  --fa: "Z";
+  --fa: "\5a";
 }
 
 .fa-person-skiing {
@@ -3674,7 +3688,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-a {
-  --fa: "A";
+  --fa: "\41";
 }
 
 .fa-temperature-arrow-down {
@@ -3694,7 +3708,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-p {
-  --fa: "P";
+  --fa: "\50";
 }
 
 .fa-snowflake {
@@ -3786,7 +3800,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-question {
-  --fa: "\?";
+  --fa: "\3f";
 }
 
 .fa-file-signature {
@@ -3878,7 +3892,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-f {
-  --fa: "F";
+  --fa: "\46";
 }
 
 .fa-leaf {
@@ -4038,7 +4052,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-h {
-  --fa: "H";
+  --fa: "\48";
 }
 
 .fa-tarp {
@@ -4130,7 +4144,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-r {
-  --fa: "R";
+  --fa: "\52";
 }
 
 .fa-temperature-quarter {
@@ -4894,7 +4908,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-j {
-  --fa: "J";
+  --fa: "\4a";
 }
 
 .fa-users-viewfinder {
@@ -4934,7 +4948,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-o {
-  --fa: "O";
+  --fa: "\4f";
 }
 
 .fa-suitcase-medical {
@@ -5502,7 +5516,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-u {
-  --fa: "U";
+  --fa: "\55";
 }
 
 .fa-square-root-variable {
@@ -5542,7 +5556,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-s {
-  --fa: "S";
+  --fa: "\53";
 }
 
 .fa-timeline {
@@ -5738,7 +5752,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-n {
-  --fa: "N";
+  --fa: "\4e";
 }
 
 .fa-cable-car {
@@ -5882,7 +5896,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-b {
-  --fa: "B";
+  --fa: "\42";
 }
 
 .fa-file-medical {
@@ -6134,7 +6148,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-less-than {
-  --fa: "\<";
+  --fa: "\3c";
 }
 
 .fa-angle-down {
@@ -6346,7 +6360,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-greater-than {
-  --fa: "\>";
+  --fa: "\3e";
 }
 
 .fa-person-swimming {
@@ -6770,7 +6784,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-y {
-  --fa: "Y";
+  --fa: "\59";
 }
 
 .fa-person-snowboarding {
@@ -6894,11 +6908,11 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-plus {
-  --fa: "\+";
+  --fa: "\2b";
 }
 
 .fa-add {
-  --fa: "\+";
+  --fa: "\2b";
 }
 
 .fa-expand {
@@ -6998,7 +7012,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-equals {
-  --fa: "\=";
+  --fa: "\3d";
 }
 
 .fa-blender {
@@ -7198,11 +7212,11 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-percent {
-  --fa: "\%";
+  --fa: "\25";
 }
 
 .fa-percentage {
-  --fa: "\%";
+  --fa: "\25";
 }
 
 .fa-truck-moving {
@@ -7530,7 +7544,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-hashtag {
-  --fa: "\#";
+  --fa: "\23";
 }
 
 .fa-up-right-and-down-left-from-center {
@@ -7546,7 +7560,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-t {
-  --fa: "T";
+  --fa: "\54";
 }
 
 .fa-hippo {
@@ -7770,7 +7784,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-m {
-  --fa: "M";
+  --fa: "\4d";
 }
 
 .fa-table-list {
@@ -8270,7 +8284,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-exclamation {
-  --fa: "\!";
+  --fa: "\21";
 }
 
 .fa-arrows-spin {
@@ -8294,19 +8308,19 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-dollar-sign {
-  --fa: "\$";
+  --fa: "\24";
 }
 
 .fa-dollar {
-  --fa: "\$";
+  --fa: "\24";
 }
 
 .fa-usd {
-  --fa: "\$";
+  --fa: "\24";
 }
 
 .fa-x {
-  --fa: "X";
+  --fa: "\58";
 }
 
 .fa-magnifying-glass-dollar {
@@ -8358,7 +8372,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-d {
-  --fa: "D";
+  --fa: "\44";
 }
 
 .fa-stapler {
@@ -8479,20 +8493,111 @@ header {
   right: 0;
   z-index: 999;
 }
+
 header a {
-  color: white;
+  color: white !important;
   font-size: 14px;
   font-weight: 600;
 }
+
 header a i {
   font-size: 16px;
   margin-right: 5px;
 }
+
 header a:hover {
   text-decoration: underline;
 }
+
 header a:not(:last-child) {
   margin-right: 10px;
 }
 
-/*# sourceMappingURL=style.css.map */
+header .navbar-toggler {
+  background-color: transparent;
+  border-radius: 5px;
+  border-color: white;
+}
+
+header .navbar-button-icon {
+  color: white;
+}
+
+header .logo img {
+  width: 130px;
+  height: auto;
+}
+
+@media (max-width: 1200px) {
+  header .logo img {
+    width: 120px;
+  }
+}
+
+@media (max-width: 992px) {
+  header .logo img {
+    width: 100px;
+  }
+}
+
+@media (max-width: 768px) {
+  header .logo img {
+    width: 100px;
+  }
+}
+
+@media (max-width: 576px) {
+  header .logo img {
+    width: 90px;
+  }
+}
+
+.home .category {
+  margin-top: 20px;
+}
+
+.home .category h2 {
+  margin-bottom: 5px;
+}
+
+.home .category .products {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.home .category .products .product .card-product {
+  background-color: white;
+  border: 0.5px solid #03ACED;
+  border-radius: 5px;
+}
+
+.home .category .products .product .card-product a img {
+  width: 250px;
+}
+
+.home .category .products .product .card-product .card-body-product {
+  padding: 10px;
+  text-align: center;
+  color: black;
+  display: flex;
+  flex-direction: column;
+}
+
+.home .category .products .product .card-product .card-body-product h3 a {
+  color: black;
+}
+
+.home .category .products .product .card-product .card-body-product .price {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.home .category .products .product .card-product .card-body-product .btn {
+  background-color: #03ACED;
+  color: white;
+  font-weight: 600;
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin-top: 10px;
+}

@@ -1,12 +1,11 @@
 <header>
-    <nav class="navbar navbar-expand compensate-for-scrollbar">
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
             <div class="logo">
                 <a href="<?= $this->getUrl('/') ?>" title="<?= $this->getLogoAlt() ?>" class="logo">
                     <!--                    <img src="--><?php //= $this->getLogoSrc() ?><!--" alt="--><?php //= $this->getLogoAlt() ?><!--" />-->
                     <img src="https://placehold.co/100x30@2x.png?text=LegendMC" alt="<?= $this->getLogoAlt() ?>" />
                 </a>
-
             </div>
 
             <?php if (Mage::getStoreConfig('legendmc_custom/configs/active')) : ?>
@@ -18,17 +17,27 @@
                 </div>
             <?php endif; ?>
 
-            <div class="text-right button">
-                <a href="<?= $this->getUrl('customer/account/create')?>">
-                    <i class="fa-solid fa-circle-user"></i>
-                    <?= $this->helper('customer')->__('Register') ?>
-                </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-button-icon"><i class="fa-solid fa-bars"></i></span>
+                </button>
 
-                <a href="<?= $this->getUrl('customer/account/login')?>">
-                    <i class="fas fa-sign-in-alt"></i>
-                    <?= $this->helper('customer')->__('Login') ?>
-                </a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= $this->getUrl('customer/account/create')?>">
+                            <i class="fa-solid fa-circle-user"></i>
+                            <?= $this->helper('customer')->__('Register') ?>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= $this->getUrl('customer/account/login')?>">
+                            <i class="fas fa-sign-in-alt"></i>
+                            <?= $this->helper('customer')->__('Login') ?>
+                        </a>
+                    </li>
             </div>
         </div>
     </nav>
 </header>
+
+<?= $this->getBlockHtml('page.categories') ?>

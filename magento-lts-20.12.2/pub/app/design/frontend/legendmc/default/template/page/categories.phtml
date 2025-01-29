@@ -1,23 +1,23 @@
-<div class="homepage">
-    <div class="categories">
+<div class="home">
+    <div class="categories container">
         <?php foreach ($this->getCategories() as $category): ?>
             <div class="category">
-                <h2 class="text-primary">
-                    <?= $this->escapeHtml($category->getName()) ?>
-                </h2>
-                <div class="products row">
+                <h2 class="text-primary"><i class="fa-solid fa-star"></i> <?= $this->escapeHtml($category->getName()) ?></h2>
+                <div class="products">
                     <?php foreach ($this->getProductsByCategory($category) as $product): ?>
                         <div class="product">
-                            <div class="card h-100">
+                            <div class="card-product">
                                 <a href="<?= $this->escapeUrl($product->getProductUrl()) ?>">
-                                    <img src="<?= $this->escapeUrl($product->getImageUrl()) ?>" class="card-img-top" alt="<?= $this->escapeHtml($product->getName()) ?>" />
+                                    <img src="<?= $this->escapeUrl($product->getImageUrl()) ?>" alt="<?= $this->escapeHtml($product->getName()) ?>" />
                                 </a>
-                                <div class="card-body">
-                                    <h3 class="card-title">
+                                <div class="card-body-product">
+                                    <h3 class="card-title-product">
                                         <a href="<?= $this->escapeUrl($product->getProductUrl()) ?>">
                                             <?= $this->escapeHtml($product->getName()) ?>
                                         </a>
                                     </h3>
+                                    <span class="price"><?= Mage::helper("core")->currency($product->getPrice()) ?></span>
+                                    <button type="button" class="btn">VER MAIS</button>
                                 </div>
                             </div>
                         </div>

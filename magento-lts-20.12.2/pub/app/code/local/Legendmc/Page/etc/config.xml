@@ -31,4 +31,14 @@
         </helpers>
     </global>
 
+    <frontend>
+        <layout>
+            <updates>
+                <legendmc_page>
+                    <file>legendmc/page.xml</file>
+                </legendmc_page>
+            </updates>
+        </layout>
+    </frontend>
+
 </config>

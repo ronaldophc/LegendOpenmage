@@ -1,6 +1,7 @@
 /app/code/core/Mage
 /app/code/core/Zend
 /app/code/core/Enterprise
+/app/etc/local.xml
 /dev
 /lib/Zend
 /lib/Varien

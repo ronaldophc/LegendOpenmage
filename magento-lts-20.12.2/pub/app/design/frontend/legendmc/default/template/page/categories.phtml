@@ -1,0 +1,29 @@
+<div class="homepage">
+    <div class="categories">
+        <?php foreach ($this->getCategories() as $category): ?>
+            <div class="category">
+                <h2 class="text-primary">
+                    <?= $this->escapeHtml($category->getName()) ?>
+                </h2>
+                <div class="products row">
+                    <?php foreach ($this->getProductsByCategory($category) as $product): ?>
+                        <div class="product">
+                            <div class="card h-100">
+                                <a href="<?= $this->escapeUrl($product->getProductUrl()) ?>">
+                                    <img src="<?= $this->escapeUrl($product->getImageUrl()) ?>" class="card-img-top" alt="<?= $this->escapeHtml($product->getName()) ?>" />
+                                </a>
+                                <div class="card-body">
+                                    <h3 class="card-title">
+                                        <a href="<?= $this->escapeUrl($product->getProductUrl()) ?>">
+                                            <?= $this->escapeHtml($product->getName()) ?>
+                                        </a>
+                                    </h3>
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+            </div>
+        <?php endforeach; ?>
+    </div>
+</div>

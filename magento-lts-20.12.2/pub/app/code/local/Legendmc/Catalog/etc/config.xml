@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+
+<config>
+    <modules>
+        <Legendmc_Catalog>
+            <version>1.0.0</version>
+        </Legendmc_Catalog>
+    </modules>
+
+    <global>
+        <blocks>
+            <legendmc_catalog>
+                <class>Legendmc_Catalog_Block</class>
+            </legendmc_catalog>
+
+            <catalog>
+                <rewrite>
+                    <product_view>Legendmc_Catalog_Block_Product_View</product_view>
+                </rewrite>
+            </catalog>
+        </blocks>
+    </global>
+
+    <frontend>
+        <layout>
+            <updates>
+                <legendmc_catalog>
+                    <file>legendmc/catalog.xml</file>
+                </legendmc_catalog>
+            </updates>
+        </layout>
+    </frontend>
+
+</config>

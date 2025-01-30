@@ -36,7 +36,7 @@
             </action>
 
             <action method="addCss">
-                <stylesheet>css/style.css</stylesheet>
+                <stylesheet>css/style.min.css</stylesheet>
             </action>
 
             <!--adicionando arquivos js-->

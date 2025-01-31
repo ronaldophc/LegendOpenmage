@@ -202,11 +202,12 @@ body {
 //----------------------------------------------------------------IMPORTS-----------------------------------------------------------------//
 
 @import '../libs/fontawesome-6.7.2/scss/fontawesome';
+@import 'variables';
 
 //------------------------------------------------------------------HEADER------------------------------------------------------------------//
 
 header {
-    background-color: #03ACED;
+    background-color: $color1;
     position: relative;
     top: 0;
     left: 0;
@@ -226,7 +227,7 @@ header {
     }
 
     a {
-        color: white !important;
+        color: $color2 !important;
         font-size: 14px;
         font-weight: 600;
 
@@ -247,29 +248,29 @@ header {
     .navbar-toggler {
         background-color: transparent;
         border-radius: 5px;
-        border-color: white;
+        border-color: $color2;
     }
 
     .navbar-button-icon {
-        color: white;
+        color: $color2;
     }
- 
+
     .logo img {
         width: 130px;
         height: auto;
-    
+
         @media (max-width: 1200px) {
             width: 120px;
         }
-    
+
         @media (max-width: 992px) {
             width: 100px;
         }
-    
+
         @media (max-width: 768px) {
             width: 100px;
         }
-    
+
         @media (max-width: 576px) {
             width: 90px;
         }
@@ -277,7 +278,7 @@ header {
 }
 
 .home {
-    
+
     .category {
 
         margin-top: 20px;
@@ -291,14 +292,14 @@ header {
             display: flex;
             flex-direction: row;
             gap: 10px;
-            
+
             .product {
 
                 .card-product {
-                    background-color: white;
+                    background-color: $color2;
                     border: 0.5px solid #03ACED;
                     border-radius: 5px;
-                    
+
                     a {
                         img {
                             width: 250px;
@@ -325,8 +326,8 @@ header {
                         }
 
                         .btn {
-                            background-color: #03ACED;
-                            color: white;
+                            background-color: $color1;
+                            color: $color2;
                             font-weight: 600;
                             border-radius: 5px;
                             padding: 5px 10px;
@@ -339,24 +340,10 @@ header {
     }
 }
 
-// General Styling
-$primary-color: #3498db;
-$secondary-color: #2ecc71;
-$font-family: 'Arial', sans-serif;
-$bg-color: #f9f9f9;
-$border-color: #ddd;
-$hover-color: #2980b9;
-$button-bg: $primary-color;
-$button-hover-bg: darken($primary-color, 10%);
-$heading-font-size: 1.6rem;
-$price-font-size: 1.4rem;
-
-
-
 // Product View Container
 .product-view {
     background-color: white;
-    border: 1px solid $border-color;
+    border: 1px solid $border-color2;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     margin: 20px auto;
     padding: 20px;
@@ -386,34 +373,20 @@ $price-font-size: 1.4rem;
         flex-wrap: wrap;
         justify-content: space-between;
         width: 100%;
-    }
 
-    .product-img-box {
-        width: 40%;
-        text-align: center;
-
-        .product-name {
-            margin-bottom: 20px;
-            font-size: $heading-font-size;
-            font-weight: bold;
-        }
-
-        .product-image {
-            width: 100%;
-            img {
-                max-width: 100%;
-                height: auto;
-                border: 1px solid $border-color;
-            }
+        .product-shop {
+            border: 1px solid #efefef;
+            border-radius: 10px;
+            padding: 20px;
         }
     }
 
     .product-shop {
-        width: 55%;
+        width: auto;
         padding-left: 20px;
 
         .product-name {
-            font-size: $heading-font-size;
+            font-size: 1.6rem;
             margin-bottom: 10px;
         }
 
@@ -422,13 +395,13 @@ $price-font-size: 1.4rem;
 
             .price-box {
                 .regular-price {
-                    font-size: $price-font-size;
+                    font-size: 1.4rem;
                     color: #2c3e50;
 
                     .price {
-                        font-weight: bold;
-                        font-size: 1.6rem;
-                        color: $primary-color;
+                        font-weight: 700;
+                        font-size: 2rem;
+                        color: $color1;
                     }
                 }
             }
@@ -457,13 +430,13 @@ $price-font-size: 1.4rem;
                 margin-bottom: 10px;
                 .input-box {
                     select {
-                        width: 100%;
+                        width: 50%;
                         padding: 10px;
-                        border: 1px solid $border-color;
+                        border: 1px solid $border-color2;
                         border-radius: 5px;
                         font-size: 1.2rem;
                         &:focus {
-                            border-color: $primary-color;
+                            border-color: $color1;
                             outline: none;
                         }
                     }
@@ -487,12 +460,12 @@ $price-font-size: 1.4rem;
                     padding: 5px;
                     margin-right: 20px;
                     text-align: center;
-                    border: 1px solid $border-color;
+                    border: 1px solid $border-color2;
                     border-radius: 5px;
                 }
 
                 button {
-                    background-color: $button-bg;
+                    background-color: $color1;
                     color: white;
                     padding: 10px 20px;
                     border: none;
@@ -502,7 +475,7 @@ $price-font-size: 1.4rem;
                     transition: background-color 0.3s ease;
 
                     &:hover {
-                        background-color: $button-hover-bg;
+                        background-color: $hover-color1;
                     }
                 }
             }
@@ -512,7 +485,7 @@ $price-font-size: 1.4rem;
                 margin-bottom: 20px;
                 span {
                     font-weight: bold;
-                    color: $secondary-color;
+                    color: $color2;
                 }
             }
         }
@@ -532,11 +505,11 @@ $price-font-size: 1.4rem;
 
                 a {
                     font-size: 1.2rem;
-                    color: $primary-color;
+                    color: $color1;
                     transition: color 0.3s ease;
 
                     &:hover {
-                        color: $hover-color;
+                        color: $hover-color1;
                     }
                 }
             }
@@ -548,7 +521,7 @@ $price-font-size: 1.4rem;
 .product-collateral {
     margin-top: 40px;
     padding-top: 20px;
-    border-top: 1px solid $border-color;
+    border-top: 1px solid $border-color2;
 
     .tabs {
         display: flex;
@@ -557,7 +530,7 @@ $price-font-size: 1.4rem;
 
         .tab {
             padding: 10px 20px;
-            background-color: $primary-color;
+            background-color: $color1;
             color: white;
             font-size: 1.4rem;
             text-transform: uppercase;
@@ -565,7 +538,7 @@ $price-font-size: 1.4rem;
             transition: background-color 0.3s ease;
 
             &:hover {
-                background-color: $hover-color;
+                background-color: $hover-color1;
             }
         }
 
@@ -573,7 +546,7 @@ $price-font-size: 1.4rem;
             display: none;
             padding: 20px;
             background-color: #f0f0f0;
-            border: 1px solid $border-color;
+            border: 1px solid $border-color2;
             margin-top: 10px;
 
             .tab-content {

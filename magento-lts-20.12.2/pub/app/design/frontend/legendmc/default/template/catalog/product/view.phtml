@@ -12,12 +12,6 @@
 
                     <div class="col-md-6">
                         <?= $this->getChildHtml('media') ?>
-<!--                        <div class="product-img-box">-->
-<!--                            <div class="product-name">-->
-<!--                                <h1>--><?php //= $_helper->productAttribute($_product, $_product->getName(), 'name') ?><!--</h1>-->
-<!--                            </div>-->
-<!--                            --><?php //= $this->getChildHtml('media') ?>
-<!--                        </div>-->
                     </div>
 
                     <div class="col-md-6">
@@ -32,22 +26,9 @@
                                 <?= $this->getTierPriceHtml() ?>
                             </div>
 
-                            <div class="extra-info">
-                                <?= $this->getReviewsSummaryHtml($_product, 'default', false)?>
-                                <?= $this->getChildHtml('product_type_availability'); ?>
-                            </div>
-
                             <?= $this->getChildHtml('alert_urls') ?>
 
-                            <?php if ($_product->getShortDescription()):?>
-                                <div class="short-description">
-                                    <div class="std"><?= $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
-                                </div>
-                            <?php endif ?>
-
                             <?= $this->getChildHtml('other');?>
-
-
 
                             <form action="<?= $this->getSubmitUrlCustom($_product, ['_secure' => $this->_isSecure()], false) ?>"
                                   method="post"
@@ -61,11 +42,6 @@
 
                                 <?= $this->getChildHtml('related_products') ?>
 
-                                <div class="clearer"></div>
-                                <?php if ($_product->isSaleable() && $this->hasOptions()):?>
-                                    <?= $this->getChildChildHtml('container2', '', true, true) ?>
-                                <?php endif ?>
-
                                 <?php if ($_product->isSaleable() && $this->hasOptions()):?>
                                     <?= $this->getChildChildHtml('container1', '', true, true) ?>
                                 <?php endif ?>
@@ -73,29 +49,6 @@
 
                         </div>
 
-                        <div class="add-to-cart-wrapper">
-                            <?= $this->getChildHtml('product_type_data') ?>
-                            <?= $this->getChildHtml('extrahint') ?>
-
-                            <?php if (!$this->hasOptions()):?>
-                                <div class="add-to-box">
-                                    <?php if($_product->isSaleable()): ?>
-                                        <?= $this->getChildHtml('addtocart') ?>
-                                        <?php if( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
-                                            <span class="or"><?= $this->__('OR') ?></span>
-                                        <?php endif ?>
-                                    <?php endif ?>
-                                    <?= $this->getChildHtml('addto') ?>
-                                    <?= $this->getChildHtml('sharing') ?>
-                                </div>
-                                <?= $this->getChildHtml('extra_buttons') ?>
-                            <?php elseif (!$_product->isSaleable()): ?>
-                                <div class="add-to-box">
-                                    <?= $this->getChildHtml('addto') ?>
-                                    <?= $this->getChildHtml('sharing') ?>
-                                </div>
-                            <?php endif ?>
-                        </div>
                     </div>
                 </div>
             </div>

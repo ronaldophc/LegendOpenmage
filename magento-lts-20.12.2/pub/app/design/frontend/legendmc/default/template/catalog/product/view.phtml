@@ -1,147 +1,218 @@
-<?php
-/*
- *
- * @see Mage_Catalog_Block_Product_View
- * @see Mage_Review_Block_Product_View
- */
-?>
 <?php $_helper = $this->helper('catalog/output'); ?>
 <?php $_product = $this->getProduct(); ?>
 <script type="text/javascript">
-    var optionsPrice = new Product.OptionsPrice(<?php echo $this->getJsonConfig() ?>);
+    var optionsPrice = new Product.OptionsPrice(<?= $this->getJsonConfig() ?>);
 </script>
-<div id="messages_product_view"><?php echo $this->getMessagesBlock()->toHtml() ?></div>
-<div class="product-view">
-    <div class="product-essential">
-        <form action="<?php echo $this->getSubmitUrlCustom($_product, ['_secure' => $this->_isSecure()], false) ?>"
-              method="post"
-              id="product_addtocart_form"
-            <?php if ($_product->getOptions()): ?> enctype="multipart/form-data" <?php endif ?>>
-            <?php echo $this->getBlockHtml('formkey') ?>
-        <div class="no-display">
-            <input type="hidden" name="product" value="<?php echo $_product->getId() ?>" />
-            <input type="hidden" name="related_product" id="related-products-field" value="" />
-        </div>
+<?= $this->getMessagesBlock()->toHtml() ?>
+<div class="container">
+    <div class="product-view">
+        <div class="product-essential">
+            <div class="container">
+                <div class="row">
 
-        <div class="product-shop">
-            <div class="product-name">
-                <h1><?php echo $_helper->productAttribute($_product, $_product->getName(), 'name') ?></h1>
+                    <div class="col-md-6">
+                        <?= $this->getChildHtml('media') ?>
+<!--                        <div class="product-img-box">-->
+<!--                            <div class="product-name">-->
+<!--                                <h1>--><?php //= $_helper->productAttribute($_product, $_product->getName(), 'name') ?><!--</h1>-->
+<!--                            </div>-->
+<!--                            --><?php //= $this->getChildHtml('media') ?>
+<!--                        </div>-->
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="product-shop">
+                            <div class="product-name">
+                                <span class="h1"><?= $_helper->productAttribute($_product, $_product->getName(), 'name') ?></span>
+                            </div>
+
+                            <div class="price-info">
+                                <?= $this->getPriceHtml($_product); ?>
+                                <?= $this->getChildHtml('bundle_prices') ?>
+                                <?= $this->getTierPriceHtml() ?>
+                            </div>
+
+                            <div class="extra-info">
+                                <?= $this->getReviewsSummaryHtml($_product, 'default', false)?>
+                                <?= $this->getChildHtml('product_type_availability'); ?>
+                            </div>
+
+                            <?= $this->getChildHtml('alert_urls') ?>
+
+                            <?php if ($_product->getShortDescription()):?>
+                                <div class="short-description">
+                                    <div class="std"><?= $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
+                                </div>
+                            <?php endif ?>
+
+                            <?= $this->getChildHtml('other');?>
+
+
+
+                            <form action="<?= $this->getSubmitUrlCustom($_product, ['_secure' => $this->_isSecure()], false) ?>"
+                                  method="post"
+                                  id="product_addtocart_form"
+                                <?php if ($_product->getOptions()): ?> enctype="multipart/form-data" <?php endif ?>>
+                                <?= $this->getBlockHtml('formkey') ?>
+                                <div class="no-display">
+                                    <input type="hidden" name="product" value="<?= $_product->getId() ?>" />
+                                    <input type="hidden" name="related_product" id="related-products-field" value="" />
+                                </div>
+
+                                <?= $this->getChildHtml('related_products') ?>
+
+                                <div class="clearer"></div>
+                                <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+                                    <?= $this->getChildChildHtml('container2', '', true, true) ?>
+                                <?php endif ?>
+
+                                <?php if ($_product->isSaleable() && $this->hasOptions()):?>
+                                    <?= $this->getChildChildHtml('container1', '', true, true) ?>
+                                <?php endif ?>
+                            </form>
+
+                        </div>
+
+                        <div class="add-to-cart-wrapper">
+                            <?= $this->getChildHtml('product_type_data') ?>
+                            <?= $this->getChildHtml('extrahint') ?>
+
+                            <?php if (!$this->hasOptions()):?>
+                                <div class="add-to-box">
+                                    <?php if($_product->isSaleable()): ?>
+                                        <?= $this->getChildHtml('addtocart') ?>
+                                        <?php if( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
+                                            <span class="or"><?= $this->__('OR') ?></span>
+                                        <?php endif ?>
+                                    <?php endif ?>
+                                    <?= $this->getChildHtml('addto') ?>
+                                    <?= $this->getChildHtml('sharing') ?>
+                                </div>
+                                <?= $this->getChildHtml('extra_buttons') ?>
+                            <?php elseif (!$_product->isSaleable()): ?>
+                                <div class="add-to-box">
+                                    <?= $this->getChildHtml('addto') ?>
+                                    <?= $this->getChildHtml('sharing') ?>
+                                </div>
+                            <?php endif ?>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <?php if ($this->canEmailToFriend()): ?>
-                <p class="email-friend"><a href="<?php echo $this->helper('catalog/product')->getEmailToFriendUrl($_product) ?>"><?php echo $this->__('Email to a Friend') ?></a></p>
-            <?php endif ?>
+            <script type="text/javascript">
+                // A função para atualizar o preço com base na seleção da opção
+                document.observe('dom:loaded', function() {
+                    // Seleciona todos os elementos do tipo 'select' no formulário do produto configurável
+                    var configurableOptions = $$('select.super-attribute-select');
 
-            <?php echo $this->getReviewsSummaryHtml($_product, false, true)?>
-            <?php echo $this->getChildHtml('alert_urls') ?>
-            <?php echo $this->getChildHtml('product_type_data') ?>
-            <?php echo $this->getTierPriceHtml() ?>
-            <?php echo $this->getChildHtml('extrahint') ?>
+                    // Função que é chamada sempre que uma opção é alterada
+                    configurableOptions.each(function(select) {
+                        select.observe('change', function() {
+                            updatePrice(); // Atualiza o preço sempre que a opção é alterada
+                        });
+                    });
 
-            <?php if (!$this->hasOptions()):?>
-                <div class="add-to-box">
-                    <?php if($_product->isSaleable()): ?>
-                        <?php echo $this->getChildHtml('addtocart') ?>
-                        <?php if( $this->helper('wishlist')->isAllow() || $_compareUrl=$this->helper('catalog/product_compare')->getAddUrl($_product)): ?>
-                            <span class="or"><?php echo $this->__('OR') ?></span>
-                        <?php endif ?>
-                    <?php endif ?>
-                    <?php echo $this->getChildHtml('addto') ?>
-                </div>
-                <?php echo $this->getChildHtml('extra_buttons') ?>
-            <?php elseif (!$_product->isSaleable()): ?>
-                <div class="add-to-box">
-                    <?php echo $this->getChildHtml('addto') ?>
-                </div>
-            <?php endif ?>
+                    // Função para atualizar o preço baseado na opção selecionada
+                    function updatePrice() {
+                        var priceElement = document.querySelectorAll(".price"); // O elemento onde o preço do produto é exibido
+                        var selectedAttributes = {}; // Para armazenar os atributos selecionados pelo cliente
 
-            <?php if ($_product->getShortDescription()):?>
-                <div class="short-description">
-                    <h2><?php echo $this->__('Quick Overview') ?></h2>
-                    <div class="std"><?php echo $_helper->productAttribute($_product, nl2br($_product->getShortDescription()), 'short_description') ?></div>
-                </div>
-            <?php endif ?>
+                        // Para cada select de opções configuráveis, armazena o valor selecionado
+                        configurableOptions.each(function(select) {
+                            if (select.value) {
+                                console.log(select);
+                                selectedAttributes[select.name] = select.value;
+                            }
+                        });
 
-            <?php echo $this->getChildHtml('other');?>
+                        // A URL que irá retornar o preço para a seleção configurável
+                        var url = '<?= $this->getUrl("custom/configurable/updatePrice", array("product_id" => $this->getProduct()->getId())); ?>';
 
-            <?php if ($_product->isSaleable() && $this->hasOptions()):?>
-                <?php echo $this->getChildChildHtml('container1', '', true, true) ?>
-            <?php endif ?>
-
-        </div>
-
-        <div class="product-img-box">
-            <?php echo $this->getChildHtml('media') ?>
-        </div>
-
-        <div class="clearer"></div>
-        <?php if ($_product->isSaleable() && $this->hasOptions()):?>
-            <?php echo $this->getChildChildHtml('container2', '', true, true) ?>
-        <?php endif ?>
-    </form>
-    <script type="text/javascript">
-    //<![CDATA[
-        var productAddToCartForm = new VarienForm('product_addtocart_form');
-        productAddToCartForm.submit = function(button, url) {
-            if (this.validator.validate()) {
-                var form = this.form;
-                var oldUrl = form.action;
-
-                if (url) {
-                   form.action = url;
-                }
-                var e = null;
-                try {
-                    this.form.submit();
-                } catch (e) {
-                }
-                this.form.action = oldUrl;
-                if (e) {
-                    throw e;
-                }
-
-                if (button && button != 'undefined') {
-                    button.disabled = true;
-                }
-            }
-        }.bind(productAddToCartForm);
-
-        productAddToCartForm.submitLight = function(button, url){
-            if(this.validator) {
-                var nv = Validation.methods;
-                delete Validation.methods['required-entry'];
-                delete Validation.methods['validate-one-required'];
-                delete Validation.methods['validate-one-required-by-name'];
-                // Remove custom datetime validators
-                for (var methodName in Validation.methods) {
-                    if (methodName.match(/^validate-datetime-.*/i)) {
-                        delete Validation.methods[methodName];
+                        // Requisição AJAX para buscar o novo preço com base nas seleções
+                        new Ajax.Request(url, {
+                            method: 'get',
+                            parameters: selectedAttributes,
+                            onSuccess: function(response) {
+                                var responseData = response.responseText.evalJSON();
+                                if (responseData.price) {
+                                    priceElement.forEach(function(element) {
+                                        element.update(responseData.price); // Atualiza o preço na página
+                                    });
+                                }
+                            },
+                            onFailure: function() {
+                                alert('Erro ao carregar o preço');
+                            }
+                        });
                     }
-                }
+                });
+                //<![CDATA[
+                var productAddToCartForm = new VarienForm('product_addtocart_form');
+                productAddToCartForm.submit = function(button, url) {
+                    if (this.validator.validate()) {
+                        var form = this.form;
+                        var oldUrl = form.action;
 
-                if (this.validator.validate()) {
-                    if (url) {
-                        this.form.action = url;
+                        if (url) {
+                            form.action = url;
+                        }
+                        var e = null;
+                        try {
+                            this.form.submit();
+                        } catch (e) {
+                        }
+                        this.form.action = oldUrl;
+                        if (e) {
+                            throw e;
+                        }
+
+                        if (button && button != 'undefined') {
+                            button.disabled = true;
+                        }
                     }
-                    this.form.submit();
-                }
-                Object.extend(Validation.methods, nv);
-            }
-        }.bind(productAddToCartForm);
-    //]]>
-    </script>
-    </div>
+                }.bind(productAddToCartForm);
 
-    <div class="product-collateral">
-<?php foreach ($this->getChildGroup('detailed_info', 'getChildHtml') as $alias => $html):?>
-        <div class="box-collateral <?php echo "box-{$alias}"?>">
-            <?php if ($title = $this->getChildData($alias, 'title')):?>
-            <h2><?php echo $this->escapeHtml($title); ?></h2>
-            <?php endif ?>
-            <?php echo $html; ?>
+                productAddToCartForm.submitLight = function(button, url){
+                    if(this.validator) {
+                        var nv = Validation.methods;
+                        delete Validation.methods['required-entry'];
+                        delete Validation.methods['validate-one-required'];
+                        delete Validation.methods['validate-one-required-by-name'];
+                        // Remove custom datetime validators
+                        for (var methodName in Validation.methods) {
+                            if (methodName.match(/^validate-datetime-.*/i)) {
+                                delete Validation.methods[methodName];
+                            }
+                        }
+
+                        if (this.validator.validate()) {
+                            if (url) {
+                                this.form.action = url;
+                            }
+                            this.form.submit();
+                        }
+                        Object.extend(Validation.methods, nv);
+                    }
+                }.bind(productAddToCartForm);
+                //]]>
+            </script>
         </div>
-<?php endforeach ?>
-        <?php echo $this->getChildHtml('upsell_products') ?>
-        <?php echo $this->getChildHtml('product_additional_data') ?>
+
+        <div class="product-collateral toggle-content tabs">
+            <?php if ($detailedInfoGroup = $this->getChildGroup('detailed_info', 'getChildHtml')):?>
+                <dl id="collateral-tabs" class="collateral-tabs">
+                    <?php foreach ($detailedInfoGroup as $alias => $html):?>
+                        <dt class="tab"><span><?= $this->escapeHtml($this->getChildData($alias, 'title')) ?></span></dt>
+                        <dd class="tab-container">
+                            <div class="tab-content"><?= $html ?></div>
+                        </dd>
+                    <?php endforeach ?>
+                </dl>
+            <?php endif ?>
+        </div>
+
+        <?= $this->getChildHtml('upsell_products') ?>
+
     </div>
 </div>

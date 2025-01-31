@@ -1,6 +1,0 @@
-<?xml version="1.0"?>
-<layout version="0.1.0">
-    <default>
-        <block type="legendmc_page/categories" name="page.categories" template="page/categories.phtml" />
-    </default>
-</layout>

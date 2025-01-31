@@ -1,9 +1,11 @@
 <?xml version="1.0"?>
 <layout version="0.1.0">
-    <default>
-    <!-- CMS page layout -->
+    <cms_index_index>
         <reference name="root">
             <action method="setTemplate"><template>page/1column.phtml</template></action>
         </reference>
-    </default>
+        <reference name="content">
+            <block type="legendmc_page/categories" name="page.categories" template="page/categories.phtml" />
+        </reference>
+    </cms_index_index>
 </layout>

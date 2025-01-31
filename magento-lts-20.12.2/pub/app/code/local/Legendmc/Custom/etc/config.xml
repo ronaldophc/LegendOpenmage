@@ -15,4 +15,16 @@
         </helpers>
     </global>
 
+    <frontend>
+        <routers>
+            <legendmc_custom>
+                <use>standard</use>
+                <args>
+                    <module>Legendmc_Custom</module>
+                    <frontName>custom</frontName>
+                </args>
+            </legendmc_custom>
+        </routers>
+    </frontend>
+
 </config>

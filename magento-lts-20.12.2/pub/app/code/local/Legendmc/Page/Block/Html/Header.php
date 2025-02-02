@@ -19,4 +19,13 @@ class Legendmc_Page_Block_Html_Header extends Mage_Page_Block_Html_Header
         $number = $this->getWhatsAppOnlyNumber();
         return 'https://api.whatsapp.com/send/?phone=' . $number;
     }
+
+    /**<?php if (Mage::getStoreConfig('legendmc_custom/configs/active')) : ?>
+        <div class="col-2">
+            <a href="<?= $this->getWhatsAppLink() ?>" target="_blank">
+                <i class="fab fa-whatsapp"></i>
+                <?= $this->getWhatsAppNumber() ?>
+            </a>
+        </div>
+    <?php endif; ?>*/
 }

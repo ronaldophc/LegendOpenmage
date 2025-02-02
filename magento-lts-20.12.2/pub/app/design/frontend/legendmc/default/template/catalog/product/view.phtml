@@ -1,8 +1,5 @@
 <?php $_helper = $this->helper('catalog/output'); ?>
 <?php $_product = $this->getProduct(); ?>
-<script type="text/javascript">
-    var optionsPrice = new Product.OptionsPrice(<?= $this->getJsonConfig() ?>);
-</script>
 <?= $this->getMessagesBlock()->toHtml() ?>
 <div class="container">
     <div class="product-view">
@@ -20,27 +17,22 @@
                                 <span class="h1"><?= $_helper->productAttribute($_product, $_product->getName(), 'name') ?></span>
                             </div>
 
-                            <div class="price-info">
-                                <?= $this->getPriceHtml($_product); ?>
-                                <?= $this->getChildHtml('bundle_prices') ?>
-                                <?= $this->getTierPriceHtml() ?>
-                            </div>
-
-                            <?= $this->getChildHtml('alert_urls') ?>
-
-                            <?= $this->getChildHtml('other');?>
+                            <span class="price-info">
+                                <?= Mage::helper("core")->currency($_product->getPrice()) ?>
+                            </span>
 
                             <form action="<?= $this->getSubmitUrlCustom($_product, ['_secure' => $this->_isSecure()], false) ?>"
                                   method="post"
                                   id="product_addtocart_form"
-                                <?php if ($_product->getOptions()): ?> enctype="multipart/form-data" <?php endif ?>>
+                                <?php if ($_product->getOptions()): ?>
+                                     enctype="multipart/form-data" 
+                                <?php endif ?>>
+
                                 <?= $this->getBlockHtml('formkey') ?>
+
                                 <div class="no-display">
                                     <input type="hidden" name="product" value="<?= $_product->getId() ?>" />
-                                    <input type="hidden" name="related_product" id="related-products-field" value="" />
                                 </div>
-
-                                <?= $this->getChildHtml('related_products') ?>
 
                                 <?php if ($_product->isSaleable() && $this->hasOptions()):?>
                                     <?= $this->getChildChildHtml('container1', '', true, true) ?>
@@ -54,48 +46,35 @@
             </div>
 
             <script type="text/javascript">
-                // A função para atualizar o preço com base na seleção da opção
                 document.observe('dom:loaded', function() {
-                    // Seleciona todos os elementos do tipo 'select' no formulário do produto configurável
                     var configurableOptions = $$('select.super-attribute-select');
 
-                    // Função que é chamada sempre que uma opção é alterada
                     configurableOptions.each(function(select) {
                         select.observe('change', function() {
-                            updatePrice(); // Atualiza o preço sempre que a opção é alterada
+                            updatePrice();
                         });
                     });
 
-                    // Função para atualizar o preço baseado na opção selecionada
                     function updatePrice() {
-                        var priceElement = document.querySelectorAll(".price"); // O elemento onde o preço do produto é exibido
-                        var selectedAttributes = {}; // Para armazenar os atributos selecionados pelo cliente
+                        var priceElement = document.querySelector(".price");
+                        var selectedAttributes = {};
 
-                        // Para cada select de opções configuráveis, armazena o valor selecionado
                         configurableOptions.each(function(select) {
                             if (select.value) {
-                                console.log(select);
                                 selectedAttributes[select.name] = select.value;
                             }
                         });
 
-                        // A URL que irá retornar o preço para a seleção configurável
                         var url = '<?= $this->getUrl("custom/configurable/updatePrice", array("product_id" => $this->getProduct()->getId())); ?>';
 
-                        // Requisição AJAX para buscar o novo preço com base nas seleções
                         new Ajax.Request(url, {
                             method: 'get',
                             parameters: selectedAttributes,
                             onSuccess: function(response) {
                                 var responseData = response.responseText.evalJSON();
                                 if (responseData.price) {
-                                    priceElement.forEach(function(element) {
-                                        element.update(responseData.price); // Atualiza o preço na página
-                                    });
+                                    priceElement.update(responseData.price);
                                 }
-                            },
-                            onFailure: function() {
-                                alert('Erro ao carregar o preço');
                             }
                         });
                     }

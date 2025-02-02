@@ -119,7 +119,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 
@@ -163,7 +163,7 @@ label {
 }
 
 * {
-  font-family: Roboto, sans-serif !important;
+  font-family: Roboto,sans-serif !important;
   font-weight: 700 !important;
 }
 
@@ -236,12 +236,12 @@ body {
 .fa-solid,
 .far,
 .fa-regular {
-  font-family: "Font Awesome 6 Free";
+  font-family: 'Font Awesome 6 Free';
 }
 
 .fa-brands,
 .fab {
-  font-family: "Font Awesome 6 Brands";
+  font-family: 'Font Awesome 6 Brands';
 }
 
 .fa-1x {
@@ -292,14 +292,14 @@ body {
 
 .fa-xs {
   font-size: 0.75em;
-  line-height: 0.0833333337em;
+  line-height: 0.08333em;
   vertical-align: 0.125em;
 }
 
 .fa-sm {
   font-size: 0.875em;
-  line-height: 0.0714285718em;
-  vertical-align: 0.0535714295em;
+  line-height: 0.07143em;
+  vertical-align: 0.05357em;
 }
 
 .fa-lg {
@@ -310,7 +310,7 @@ body {
 
 .fa-xl {
   font-size: 1.5em;
-  line-height: 0.0416666682em;
+  line-height: 0.04167em;
   vertical-align: -0.125em;
 }
 
@@ -330,6 +330,7 @@ body {
   margin-left: var(--fa-li-margin, 2.5em);
   padding-left: 0;
 }
+
 .fa-ul > li {
   position: relative;
 }
@@ -453,6 +454,7 @@ body {
     transition-duration: 0s;
   }
 }
+
 @keyframes fa-beat {
   0%, 90% {
     transform: scale(1);
@@ -461,6 +463,7 @@ body {
     transform: scale(var(--fa-beat-scale, 1.25));
   }
 }
+
 @keyframes fa-bounce {
   0% {
     transform: scale(1, 1) translateY(0);
@@ -484,11 +487,13 @@ body {
     transform: scale(1, 1) translateY(0);
   }
 }
+
 @keyframes fa-fade {
   50% {
     opacity: var(--fa-fade-opacity, 0.4);
   }
 }
+
 @keyframes fa-beat-fade {
   0%, 100% {
     opacity: var(--fa-beat-fade-opacity, 0.4);
@@ -499,11 +504,13 @@ body {
     transform: scale(var(--fa-beat-fade-scale, 1.125));
   }
 }
+
 @keyframes fa-flip {
   50% {
     transform: rotate3d(var(--fa-flip-x, 0), var(--fa-flip-y, 1), var(--fa-flip-z, 0), var(--fa-flip-angle, -180deg));
   }
 }
+
 @keyframes fa-shake {
   0% {
     transform: rotate(-15deg);
@@ -533,6 +540,7 @@ body {
     transform: rotate(0deg);
   }
 }
+
 @keyframes fa-spin {
   0% {
     transform: rotate(0deg);
@@ -541,6 +549,7 @@ body {
     transform: rotate(360deg);
   }
 }
+
 .fa-rotate-90 {
   transform: rotate(90deg);
 }
@@ -603,43 +612,43 @@ body {
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
 readers do not read off random characters that represent icons */
 .fa-0 {
-  --fa: "\30 ";
+  --fa: "\30";
 }
 
 .fa-1 {
-  --fa: "\31 ";
+  --fa: "\31";
 }
 
 .fa-2 {
-  --fa: "\32 ";
+  --fa: "\32";
 }
 
 .fa-3 {
-  --fa: "\33 ";
+  --fa: "\33";
 }
 
 .fa-4 {
-  --fa: "\34 ";
+  --fa: "\34";
 }
 
 .fa-5 {
-  --fa: "\35 ";
+  --fa: "\35";
 }
 
 .fa-6 {
-  --fa: "\36 ";
+  --fa: "\36";
 }
 
 .fa-7 {
-  --fa: "\37 ";
+  --fa: "\37";
 }
 
 .fa-8 {
-  --fa: "\38 ";
+  --fa: "\38";
 }
 
 .fa-9 {
-  --fa: "\39 ";
+  --fa: "\39";
 }
 
 .fa-fill-drip {
@@ -659,7 +668,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-at {
-  --fa: "\@";
+  --fa: "\40";
 }
 
 .fa-trash-can {
@@ -1027,7 +1036,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-k {
-  --fa: "K";
+  --fa: "\4b";
 }
 
 .fa-landmark-flag {
@@ -1167,7 +1176,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-w {
-  --fa: "W";
+  --fa: "\57";
 }
 
 .fa-earth-africa {
@@ -1567,7 +1576,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-asterisk {
-  --fa: "\*";
+  --fa: "\2a";
 }
 
 .fa-square-check {
@@ -1907,7 +1916,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-i {
-  --fa: "I";
+  --fa: "\49";
 }
 
 .fa-hryvnia-sign {
@@ -1935,7 +1944,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-v {
-  --fa: "V";
+  --fa: "\56";
 }
 
 .fa-bangladeshi-taka-sign {
@@ -2011,11 +2020,11 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-q {
-  --fa: "Q";
+  --fa: "\51";
 }
 
 .fa-g {
-  --fa: "G";
+  --fa: "\47";
 }
 
 .fa-notes-medical {
@@ -2159,7 +2168,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-e {
-  --fa: "E";
+  --fa: "\45";
 }
 
 .fa-pen-clip {
@@ -2239,7 +2248,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-c {
-  --fa: "C";
+  --fa: "\43";
 }
 
 .fa-tablet-button {
@@ -2575,7 +2584,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-l {
-  --fa: "L";
+  --fa: "\4c";
 }
 
 .fa-fire {
@@ -3663,7 +3672,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-z {
-  --fa: "Z";
+  --fa: "\5a";
 }
 
 .fa-person-skiing {
@@ -3679,7 +3688,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-a {
-  --fa: "A";
+  --fa: "\41";
 }
 
 .fa-temperature-arrow-down {
@@ -3699,7 +3708,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-p {
-  --fa: "P";
+  --fa: "\50";
 }
 
 .fa-snowflake {
@@ -3791,7 +3800,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-question {
-  --fa: "\?";
+  --fa: "\3f";
 }
 
 .fa-file-signature {
@@ -3883,7 +3892,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-f {
-  --fa: "F";
+  --fa: "\46";
 }
 
 .fa-leaf {
@@ -4043,7 +4052,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-h {
-  --fa: "H";
+  --fa: "\48";
 }
 
 .fa-tarp {
@@ -4135,7 +4144,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-r {
-  --fa: "R";
+  --fa: "\52";
 }
 
 .fa-temperature-quarter {
@@ -4899,7 +4908,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-j {
-  --fa: "J";
+  --fa: "\4a";
 }
 
 .fa-users-viewfinder {
@@ -4939,7 +4948,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-o {
-  --fa: "O";
+  --fa: "\4f";
 }
 
 .fa-suitcase-medical {
@@ -5507,7 +5516,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-u {
-  --fa: "U";
+  --fa: "\55";
 }
 
 .fa-square-root-variable {
@@ -5547,7 +5556,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-s {
-  --fa: "S";
+  --fa: "\53";
 }
 
 .fa-timeline {
@@ -5743,7 +5752,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-n {
-  --fa: "N";
+  --fa: "\4e";
 }
 
 .fa-cable-car {
@@ -5887,7 +5896,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-b {
-  --fa: "B";
+  --fa: "\42";
 }
 
 .fa-file-medical {
@@ -6139,7 +6148,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-less-than {
-  --fa: "\<";
+  --fa: "\3c";
 }
 
 .fa-angle-down {
@@ -6351,7 +6360,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-greater-than {
-  --fa: "\>";
+  --fa: "\3e";
 }
 
 .fa-person-swimming {
@@ -6775,7 +6784,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-y {
-  --fa: "Y";
+  --fa: "\59";
 }
 
 .fa-person-snowboarding {
@@ -6899,11 +6908,11 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-plus {
-  --fa: "\+";
+  --fa: "\2b";
 }
 
 .fa-add {
-  --fa: "\+";
+  --fa: "\2b";
 }
 
 .fa-expand {
@@ -7003,7 +7012,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-equals {
-  --fa: "\=";
+  --fa: "\3d";
 }
 
 .fa-blender {
@@ -7203,11 +7212,11 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-percent {
-  --fa: "\%";
+  --fa: "\25";
 }
 
 .fa-percentage {
-  --fa: "\%";
+  --fa: "\25";
 }
 
 .fa-truck-moving {
@@ -7535,7 +7544,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-hashtag {
-  --fa: "\#";
+  --fa: "\23";
 }
 
 .fa-up-right-and-down-left-from-center {
@@ -7551,7 +7560,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-t {
-  --fa: "T";
+  --fa: "\54";
 }
 
 .fa-hippo {
@@ -7775,7 +7784,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-m {
-  --fa: "M";
+  --fa: "\4d";
 }
 
 .fa-table-list {
@@ -8275,7 +8284,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-exclamation {
-  --fa: "\!";
+  --fa: "\21";
 }
 
 .fa-arrows-spin {
@@ -8299,19 +8308,19 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-dollar-sign {
-  --fa: "\$";
+  --fa: "\24";
 }
 
 .fa-dollar {
-  --fa: "\$";
+  --fa: "\24";
 }
 
 .fa-usd {
-  --fa: "\$";
+  --fa: "\24";
 }
 
 .fa-x {
-  --fa: "X";
+  --fa: "\58";
 }
 
 .fa-magnifying-glass-dollar {
@@ -8363,7 +8372,7 @@ readers do not read off random characters that represent icons */
 }
 
 .fa-d {
-  --fa: "D";
+  --fa: "\44";
 }
 
 .fa-stapler {
@@ -8484,58 +8493,71 @@ header {
   right: 0;
   z-index: 999;
 }
+
 header .top-bar {
   color: #f3f3f3;
   padding: 5px;
   background-color: black;
 }
+
 header .top-bar .content {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
 header a {
-  color: white !important;
+  color: #FFFFFFFF !important;
   font-size: 14px;
   font-weight: 600;
 }
+
 header a i {
   font-size: 16px;
   margin-right: 5px;
 }
+
 header a:hover {
   text-decoration: underline;
 }
+
 header a:not(:last-child) {
   margin-right: 10px;
 }
+
 header .navbar-toggler {
   background-color: transparent;
   border-radius: 5px;
-  border-color: white;
+  border-color: #FFFFFFFF;
 }
+
 header .navbar-button-icon {
-  color: white;
+  color: #FFFFFFFF;
 }
+
 header .logo img {
   width: 130px;
   height: auto;
 }
+
 @media (max-width: 1200px) {
   header .logo img {
     width: 120px;
   }
 }
+
 @media (max-width: 992px) {
   header .logo img {
     width: 100px;
   }
 }
+
 @media (max-width: 768px) {
   header .logo img {
     width: 100px;
   }
 }
+
 @media (max-width: 576px) {
   header .logo img {
     width: 90px;
@@ -8545,22 +8567,27 @@ header .logo img {
 .home .category {
   margin-top: 20px;
 }
+
 .home .category h2 {
   margin-bottom: 5px;
 }
+
 .home .category .products {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
+
 .home .category .products .product .card-product {
-  background-color: white;
+  background-color: #FFFFFFFF;
   border: 0.5px solid #03ACED;
   border-radius: 5px;
 }
+
 .home .category .products .product .card-product a img {
   width: 250px;
 }
+
 .home .category .products .product .card-product .card-body-product {
   padding: 10px;
   text-align: center;
@@ -8569,16 +8596,19 @@ header .logo img {
   flex-direction: column;
   width: 250px;
 }
+
 .home .category .products .product .card-product .card-body-product h3 a {
   color: black;
 }
+
 .home .category .products .product .card-product .card-body-product .price {
   font-size: 16px;
   font-weight: 600;
 }
+
 .home .category .products .product .card-product .card-body-product .btn {
   background-color: #03ACED;
-  color: white;
+  color: #FFFFFFFF;
   font-weight: 600;
   border-radius: 5px;
   padding: 5px 10px;
@@ -8596,67 +8626,83 @@ header .logo img {
   flex-wrap: wrap;
   gap: 20px;
 }
+
 .product-view #image-main {
   width: 100%;
   border: 1px solid #efefef;
 }
+
 .product-view .more-views .product-image-thumbs {
   display: flex;
   gap: 5px;
 }
+
 .product-view .more-views .product-image-thumbs li {
   border: 1px solid #efefef;
 }
+
 .product-view .product-essential {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
 }
+
 .product-view .product-essential .product-shop {
   border: 1px solid #efefef;
   border-radius: 10px;
   padding: 20px;
 }
+
 .product-view .product-shop {
   width: auto;
   padding-left: 20px;
 }
+
 .product-view .product-shop .product-name {
   font-size: 1.6rem;
   margin-bottom: 10px;
 }
+
 .product-view .product-shop .price-info {
   margin-bottom: 20px;
 }
+
 .product-view .product-shop .price-info .price-box .regular-price {
   font-size: 1.4rem;
   color: #2c3e50;
 }
+
 .product-view .product-shop .price-info .price-box .regular-price .price {
   font-weight: 700;
   font-size: 2rem;
   color: #03ACED;
 }
+
 .product-view .product-shop .short-description {
   font-size: 1.2rem;
   margin-bottom: 20px;
   color: #7f8c8d;
 }
+
 .product-view .product-shop .short-description .std {
   font-size: 1.2rem;
   line-height: 1.5;
 }
+
 .product-view .product-shop .product-options {
   margin-bottom: 20px;
 }
+
 .product-view .product-shop .product-options dt {
   font-weight: bold;
   margin-bottom: 5px;
 }
+
 .product-view .product-shop .product-options dd {
   margin-bottom: 10px;
 }
+
 .product-view .product-shop .product-options dd .input-box select {
   width: 50%;
   padding: 10px;
@@ -8664,19 +8710,23 @@ header .logo img {
   border-radius: 5px;
   font-size: 1.2rem;
 }
+
 .product-view .product-shop .product-options dd .input-box select:focus {
   border-color: #03ACED;
   outline: none;
 }
+
 .product-view .product-shop .product-options-bottom .add-to-cart {
   margin-top: 20px;
   display: flex;
   align-items: center;
 }
+
 .product-view .product-shop .product-options-bottom .add-to-cart label {
   margin-right: 10px;
   font-size: 1.2rem;
 }
+
 .product-view .product-shop .product-options-bottom .add-to-cart .qty {
   width: 50px;
   padding: 5px;
@@ -8685,6 +8735,7 @@ header .logo img {
   border: 1px solid #ddd;
   border-radius: 5px;
 }
+
 .product-view .product-shop .product-options-bottom .add-to-cart button {
   background-color: #03ACED;
   color: white;
@@ -8695,34 +8746,42 @@ header .logo img {
   font-size: 1.2rem;
   transition: background-color 0.3s ease;
 }
+
 .product-view .product-shop .product-options-bottom .add-to-cart button:hover {
   background-color: #2980b9;
 }
+
 .product-view .product-shop .product-options-bottom .availability {
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
+
 .product-view .product-shop .product-options-bottom .availability span {
   font-weight: bold;
-  color: white;
+  color: #FFFFFFFF;
 }
+
 .product-view .product-shop .add-to-links {
   list-style: none;
   padding: 0;
   margin-top: 20px;
 }
+
 .product-view .product-shop .add-to-links li {
   display: inline-block;
   margin-right: 10px;
 }
+
 .product-view .product-shop .add-to-links li .separator {
   margin: 0 5px;
 }
+
 .product-view .product-shop .add-to-links li a {
   font-size: 1.2rem;
   color: #03ACED;
   transition: color 0.3s ease;
 }
+
 .product-view .product-shop .add-to-links li a:hover {
   color: #2980b9;
 }
@@ -8732,11 +8791,13 @@ header .logo img {
   padding-top: 20px;
   border-top: 1px solid #ddd;
 }
+
 .product-collateral .tabs {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
+
 .product-collateral .tabs .tab {
   padding: 10px 20px;
   background-color: #03ACED;
@@ -8746,9 +8807,11 @@ header .logo img {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
+
 .product-collateral .tabs .tab:hover {
   background-color: #2980b9;
 }
+
 .product-collateral .tabs .tab-container {
   display: none;
   padding: 20px;
@@ -8756,6 +8819,7 @@ header .logo img {
   border: 1px solid #ddd;
   margin-top: 10px;
 }
+
 .product-collateral .tabs .tab-container .tab-content {
   font-size: 1.2rem;
 }
@@ -8777,5 +8841,3 @@ header .logo img {
     align-items: flex-start;
   }
 }
-
-/*# sourceMappingURL=style.css.map */

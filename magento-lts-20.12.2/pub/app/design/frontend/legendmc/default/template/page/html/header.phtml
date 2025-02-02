@@ -2,8 +2,8 @@
     <div class="top-bar">
         <div class="container">
             <div class="content">
-                <span><i class="fab fa-whatsapp"></i> legendmc.com.br</span>
-                <a href="discord.gg"><i class="fab fa-whatsapp"></i> Discord</a>
+                <span><i class="fa-solid fa-info-circle" aria-hidden="true"></i> Legendmc.com.br</span>
+                <a href="http://discord.gg"><i class="fa-brands fa-discord"></i> Discord</a>
             </div>
         </div>
     </div>
@@ -16,18 +16,9 @@
                 </a>
             </div>
 
-            <?php if (Mage::getStoreConfig('legendmc_custom/configs/active')) : ?>
-                <div class="col-2">
-                    <a href="<?= $this->getWhatsAppLink() ?>" target="_blank">
-                        <i class="fab fa-whatsapp"></i>
-                        <?= $this->getWhatsAppNumber() ?>
-                    </a>
-                </div>
-            <?php endif; ?>
-
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-button-icon"><i class="fa-solid fa-bars"></i></span>
-                </button>
+                <span class="navbar-button-icon"><i class="fa-solid fa-bars"></i></span>
+            </button>
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
@@ -43,6 +34,7 @@
                             <?= $this->helper('customer')->__('Login') ?>
                         </a>
                     </li>
+                </ul>
             </div>
         </div>
     </nav>

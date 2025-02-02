@@ -15,6 +15,7 @@
                 <type>js</type>
                 <file>scriptaculous/slider.js</file>
             </action>
+            
 
             <!--removendo arquivos css inúteis-->
             <action method="removeItem">
@@ -36,7 +37,7 @@
             </action>
 
             <action method="addCss">
-                <stylesheet>css/style.css</stylesheet>
+                <stylesheet>css/style.min.css</stylesheet>
             </action>
 
             <!--adicionando arquivos js-->
@@ -53,4 +54,13 @@
         </reference>
 
     </default>
+
+    <catalog_product_view>
+        <reference name="head">
+            <action method="removeItem">
+                <type>js</type>
+                <name>varien/configurable.js</name>
+            </action>
+        </reference>
+    </catalog_product_view>
 </layout>
